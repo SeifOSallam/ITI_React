@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+section {
+    height: 75vh;
+}
+#home {
+    background: url("../../../public/assets/images/4kdummy.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
