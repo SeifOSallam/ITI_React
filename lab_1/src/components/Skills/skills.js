@@ -3,6 +3,20 @@ import './skills.css';
 
 
 function Skills(){
+    const allSkills = [
+        {
+            skillName:"HTML5",
+            percentage:"50%"
+        },
+        {
+            skillName:"CSS3",
+            percentage:"20%"
+        },
+        {
+            skillName:"Javascript",
+            percentage:"80%"
+        },
+    ]
     return(
         <div className="skills p-4 text-white text-center">
     <div className="container">
@@ -21,9 +35,14 @@ function Skills(){
                 <span className="text-start mt-2">Mobile App Design</span>
             </div>
             <div className="rightskills flex-fill">
-                <SkillBar percentage="50%" skillName="HTML5"></SkillBar>
-                <SkillBar percentage="80%" skillName="CSS3"></SkillBar>
-                <SkillBar percentage="20%" skillName="Javascript"></SkillBar>
+                {
+                    allSkills.map((skill, index) => {
+                        return(
+                            <SkillBar percentage={skill.percentage} 
+                            skillName={skill.skillName} key={index}></SkillBar>
+                        );
+                    })
+                }
             </div>
         </div>
     </div>
